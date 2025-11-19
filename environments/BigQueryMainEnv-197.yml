@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "197"
+mappingDefinitions:
+  SRC:
+    database: bigquery-public-data
+    schema: austin_crime
+  TARGET:
+    database: coalesce-a6346
+    schema: ben_dev_main
+name: BigQuery Main Env
+type: Environment
