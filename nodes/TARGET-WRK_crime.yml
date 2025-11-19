@@ -169,7 +169,7 @@ operation:
           stepCounter: 0c3d671a-6806-44ba-b03b-cd83ff3dd1d1
         config: {}
         dataType: STRING
-        description: ""
+        description: This is a test description
         name: location
         nullable: true
         sourceColumnReferences:
