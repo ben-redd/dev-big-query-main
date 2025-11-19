@@ -176,7 +176,7 @@ operation:
           - columnReferences:
               - columnCounter: 2e9f7ce4-cd15-4406-bab6-b7d5f2ff8f7a
                 stepCounter: 8666b1a3-19c2-4506-a4dd-d105e229b19f
-            transform: ""
+            transform: UPPER("crime"."location")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 7ead3a1c-1a19-4448-a152-28909b015f8f
