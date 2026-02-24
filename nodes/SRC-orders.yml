@@ -1,0 +1,169 @@
+fileVersion: 1
+id: 7f1d139b-6028-408f-9822-39846fd22b56
+name: orders
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4c14b14d-27dd-4172-8815-780530c24cc4
+          stepCounter: 7f1d139b-6028-408f-9822-39846fd22b56
+        config: {}
+        dataType: BIGNUMERIC
+        defaultValue: ""
+        description: Unique identifier for the order. Primary key of the table.
+        name: o_orderkey
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f5b91205-57de-4241-8ed1-481c08d750e5
+          stepCounter: 7f1d139b-6028-408f-9822-39846fd22b56
+        config: {}
+        dataType: BIGNUMERIC
+        defaultValue: ""
+        description: Foreign key identifying the customer who placed the order (customer.c_custkey).
+        name: o_custkey
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8251c159-4b7f-4336-b3bc-220ab7257eed
+          stepCounter: 7f1d139b-6028-408f-9822-39846fd22b56
+        config: {}
+        dataType: STRING(1)
+        defaultValue: ""
+        description: Order status code (e.g., ‘O’ = Open, ‘F’ = Filled, ‘P’ = Pending).
+        name: o_orderstatus
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 14cc9977-5097-4720-9ad0-982e50589c32
+          stepCounter: 7f1d139b-6028-408f-9822-39846fd22b56
+        config: {}
+        dataType: FLOAT64
+        defaultValue: ""
+        description: Total monetary value of the order.
+        name: o_totalprice
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 519a7555-3803-4b62-96aa-3664e29930d6
+          stepCounter: 7f1d139b-6028-408f-9822-39846fd22b56
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: Date when the order was placed.
+        name: o_orderdate
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f80dc5a6-8ed2-4f30-83b1-e8cd7a071076
+          stepCounter: 7f1d139b-6028-408f-9822-39846fd22b56
+        config: {}
+        dataType: STRING(15)
+        defaultValue: ""
+        description: Priority code assigned to the order (e.g., 1-URGENT).
+        name: o_orderpriority
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ca9c084-081c-4179-b87a-88f3f567df81
+          stepCounter: 7f1d139b-6028-408f-9822-39846fd22b56
+        config: {}
+        dataType: STRING(15)
+        defaultValue: ""
+        description: Identifier of the clerk responsible for the order.
+        name: o_clerk
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a0b33fdc-adc9-4ae6-8869-fa27f84123c2
+          stepCounter: 7f1d139b-6028-408f-9822-39846fd22b56
+        config: {}
+        dataType: BIGNUMERIC
+        defaultValue: ""
+        description: Priority value influencing shipping order.
+        name: o_shippriority
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c008d0a1-7c3c-4ad8-8365-68cf4b82ded9
+          stepCounter: 7f1d139b-6028-408f-9822-39846fd22b56
+        config: {}
+        dataType: STRING(79)
+        defaultValue: ""
+        description: Free-text comment about the order.
+        name: o_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: orders
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

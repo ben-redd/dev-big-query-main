@@ -1,0 +1,152 @@
+fileVersion: 1
+id: b4931851-959d-403f-8d2e-7b7795b512ee
+name: customer
+operation:
+  database: ""
+  deployEnabled: true
+  description: Contains master data for all customers in the TPC-H dataset, including identifying information, address details, nation reference, contact information, account balance, market segment classification, and a free-form comment field. Serves as the primary dimension table for customer-related analyses and joins to the NATION and ORDERS tables.
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 64a0d8fd-0f27-4fdf-b9a3-73fd8bac6326
+          stepCounter: b4931851-959d-403f-8d2e-7b7795b512ee
+        config: {}
+        dataType: BIGNUMERIC
+        defaultValue: ""
+        description: "Primary key: unique customer identifier"
+        name: c_custkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: baba2421-5cc8-4188-9e8d-cc2dbbc0444e
+          stepCounter: b4931851-959d-403f-8d2e-7b7795b512ee
+        config: {}
+        dataType: STRING(25)
+        defaultValue: ""
+        description: Customer name
+        name: c_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fbdddfd9-c0e6-4219-8f9e-0e1964c99814
+          stepCounter: b4931851-959d-403f-8d2e-7b7795b512ee
+        config: {}
+        dataType: STRING(40)
+        defaultValue: ""
+        description: Customer street address
+        name: c_address
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 626ac18b-33e5-490f-ae5f-096947e804ac
+          stepCounter: b4931851-959d-403f-8d2e-7b7795b512ee
+        config: {}
+        dataType: BIGNUMERIC
+        defaultValue: ""
+        description: Foreign key to nation.n_nationkey
+        name: c_nationkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b9b2ec11-943a-4a92-9812-9f1078704658
+          stepCounter: b4931851-959d-403f-8d2e-7b7795b512ee
+        config: {}
+        dataType: STRING(15)
+        defaultValue: ""
+        description: Customer phone number
+        name: c_phone
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: db2e5145-a361-4df1-89fa-011fd896c680
+          stepCounter: b4931851-959d-403f-8d2e-7b7795b512ee
+        config: {}
+        dataType: FLOAT64
+        defaultValue: ""
+        description: Customer account balance
+        name: c_acctbal
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f95b9b7-9d8d-4e27-b876-c939dd4d8d6f
+          stepCounter: b4931851-959d-403f-8d2e-7b7795b512ee
+        config: {}
+        dataType: STRING(10)
+        defaultValue: ""
+        description: Market segment for the customer
+        name: c_mktsegment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d8607449-f2b5-4d33-b423-f471ce61fa9a
+          stepCounter: b4931851-959d-403f-8d2e-7b7795b512ee
+        config: {}
+        dataType: STRING(117)
+        defaultValue: ""
+        description: Free-text comment for the customer
+        name: c_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: customer
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
