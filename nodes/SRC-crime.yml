@@ -1,0 +1,322 @@
+fileVersion: 1
+id: f4de71ac-d61d-4401-8da0-3e377e69c93e
+name: crime
+operation:
+  database: ""
+  deployEnabled: true
+  description: Austin Crime table
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f400e96a-228b-4396-bbab-a184e275cd3a
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: INT64
+        defaultValue: ""
+        description: Unique identifier for the record.
+        name: unique_key
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 663ef822-649e-4425-be9e-05ec6e59e824
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: Full address where the incident occurred.
+        name: address
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c36b59dc-eebf-4af7-ba94-63b65975f53f
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: FLOAT64
+        defaultValue: ""
+        description: ""
+        name: census_tract
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c4dc121-6898-4889-ace3-ec90365aa1f2
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: clearance_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4360e920-afaf-44d1-8b1a-c30b56cd2345
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: clearance_status
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79a73266-0e73-4719-83b9-764efbf2f213
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: INT64
+        defaultValue: ""
+        description: Indicates the council district code where the incident occurred.
+        name: council_district_code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 441fd80f-6f75-44a3-a838-6fd5dde85afd
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: The subcategory of the primary description.
+        name: description
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7bc14c60-4b21-444d-a42d-8594239bc838
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: Indicates the police district where the incident occurred.
+        name: district
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 482dfcff-d982-481b-a864-719f32c0cdf6
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: FLOAT64
+        defaultValue: ""
+        description: ""
+        name: latitude
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6d991668-9832-48e3-bfa3-9b57b20199dc
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: FLOAT64
+        defaultValue: ""
+        description: ""
+        name: longitude
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c1735024-61ea-4e78-9bcf-cd3dfd12b660
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: location
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f37dab9-44d1-4173-ade2-cbcfe1e29048
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: Description of the location where the incident occurred.
+        name: location_description
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 13db318a-87c5-420f-bf5d-744189e77929
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: The primary description of the NIBRS/UCR code.
+        name: primary_type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2a3c5ca4-0acf-415d-b59b-af32226b9654
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: Time when the incident occurred. This is sometimes a best estimate.
+        name: timestamp
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c0ef85e7-c85f-496b-9dcf-1f2582e2f24f
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: INT64
+        defaultValue: ""
+        description: The x coordinate of the location where the incident occurred
+        name: x_coordinate
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fc6543ef-8fe4-4972-bfab-6ee2cdf375da
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: INT64
+        defaultValue: ""
+        description: The y coordinate of the location where the incident occurred
+        name: y_coordinate
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4944c0aa-4ff3-4d03-8a56-628c5f1b6e40
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: INT64
+        defaultValue: ""
+        description: Indicates the year in which the incident occurred.
+        name: year
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 890f5614-c099-498f-ac15-737da540df47
+          stepCounter: f4de71ac-d61d-4401-8da0-3e377e69c93e
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: Indicates the zipcode where the incident occurred.
+        name: zipcode
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: crime
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
