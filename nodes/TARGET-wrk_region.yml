@@ -1,0 +1,86 @@
+fileVersion: 1
+id: 18d483ef-3374-47e7-bb57-c2d1ffce7e92
+name: wrk_region
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3528d592-79da-4402-b252-eed4326d6aba
+          stepCounter: 18d483ef-3374-47e7-bb57-c2d1ffce7e92
+        config: {}
+        dataType: BIGNUMERIC
+        description: Unique identifier for the region. Primary key of the table.
+        name: r_regionkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: eb425eb0-7754-4e6e-bdde-cf421ed74efe
+                stepCounter: bc593058-c1c2-4c90-be5b-29d3fcc8c1a1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 17b98947-02a2-47c6-b63a-6b27a218bb00
+          stepCounter: 18d483ef-3374-47e7-bb57-c2d1ffce7e92
+        config: {}
+        dataType: STRING(25)
+        description: Name of the region.
+        name: r_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 897b8cc1-7c9b-4b08-a228-0636125f677c
+                stepCounter: bc593058-c1c2-4c90-be5b-29d3fcc8c1a1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d675cf4-22e9-4051-b809-4a44a84e37af
+          stepCounter: 18d483ef-3374-47e7-bb57-c2d1ffce7e92
+        config: {}
+        dataType: STRING(152)
+        description: Free-text comment describing the region.
+        name: r_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9338ca38-a6ef-4f81-9a18-7eecc15e3b0d
+                stepCounter: bc593058-c1c2-4c90-be5b-29d3fcc8c1a1
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          region: bc593058-c1c2-4c90-be5b-29d3fcc8c1a1
+        dependencies:
+          - locationName: SRC
+            nodeName: region
+        join:
+          joinCondition: FROM {{ ref('SRC', 'region') }} `region`
+        name: wrk_region
+        noLinkRefs: []
+  name: wrk_region
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

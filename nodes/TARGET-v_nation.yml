@@ -1,0 +1,94 @@
+fileVersion: 1
+id: 984ae005-3056-410d-adc8-b5b175507637
+name: v_nation
+operation:
+  config:
+    OverrideSQLCreate: false
+    groupByAll: false
+    insertStrategy: UNION ALL
+    secureoption: false
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1565fa1b-a0d3-4fa7-bdf3-294d7c53bc7b
+          stepCounter: 984ae005-3056-410d-adc8-b5b175507637
+        config: {}
+        dataType: BIGNUMERIC
+        description: Unique identifier for the nation record.
+        name: n_nationkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0ca84dd6-a848-40a1-98a4-a2986f41e99b
+                stepCounter: 0a749c4b-d96e-49c6-bbb1-aae285903355
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8fcab6a2-0ca2-46a4-909a-5bf850f00817
+          stepCounter: 984ae005-3056-410d-adc8-b5b175507637
+        config: {}
+        dataType: STRING(25)
+        description: Name of the nation.
+        name: n_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8ba35eb4-efe2-442a-aed7-d4b2772e9f14
+                stepCounter: 0a749c4b-d96e-49c6-bbb1-aae285903355
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c29b1ba5-561e-434d-8c45-22e1dbd8f6e1
+          stepCounter: 984ae005-3056-410d-adc8-b5b175507637
+        config: {}
+        dataType: BIGNUMERIC
+        description: Foreign key linking to the region table (region.r_regionkey).
+        name: n_regionkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fc258b3b-9648-46c9-b1a8-2aa1aed63f37
+                stepCounter: 0a749c4b-d96e-49c6-bbb1-aae285903355
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d14e3e6e-0451-4c9b-9990-10e4544e1c5e
+          stepCounter: 984ae005-3056-410d-adc8-b5b175507637
+        config: {}
+        dataType: STRING(152)
+        description: Optional free-text comment describing the nation.
+        name: n_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a09148f9-9be4-4eda-bf63-11da7dedc693
+                stepCounter: 0a749c4b-d96e-49c6-bbb1-aae285903355
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          wrk_nation: 0a749c4b-d96e-49c6-bbb1-aae285903355
+        dependencies:
+          - locationName: TARGET
+            nodeName: wrk_nation
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'wrk_nation') }} `wrk_nation`
+        name: v_nation
+        noLinkRefs: []
+  name: v_nation
+  overrideSQL: false
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

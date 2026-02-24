@@ -1,0 +1,72 @@
+fileVersion: 1
+id: 8fcdd7ee-f511-4e3b-9a8e-df8aa5f344b1
+name: wrk_daily_14_total_short
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 65c857bb-d8dc-4d0a-b0bc-57b4a0662183
+          stepCounter: 8fcdd7ee-f511-4e3b-9a8e-df8aa5f344b1
+        config: {}
+        dataType: JSON
+        description: ""
+        name: v
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 49f54596-0112-480f-ba05-012fa9f86c7d
+                stepCounter: 04bfae81-f266-4f87-b905-a95035063f75
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2b6bc7e5-7273-4f58-82e6-35275394a0ad
+          stepCounter: 8fcdd7ee-f511-4e3b-9a8e-df8aa5f344b1
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: t
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2ddf5dc7-f995-4373-8327-4a35ff6a562c
+                stepCounter: 04bfae81-f266-4f87-b905-a95035063f75
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          daily_14_total_short: 04bfae81-f266-4f87-b905-a95035063f75
+        dependencies:
+          - locationName: SRC
+            nodeName: daily_14_total_short
+        join:
+          joinCondition: FROM {{ ref('SRC', 'daily_14_total_short') }} `daily_14_total_short`
+        name: wrk_daily_14_total_short
+        noLinkRefs: []
+  name: wrk_daily_14_total_short
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
