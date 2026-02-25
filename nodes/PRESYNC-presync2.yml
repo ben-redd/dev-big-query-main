@@ -1,6 +1,6 @@
 fileVersion: 1
 id: 5d9a848e-e10a-4fc3-a225-d96fb070f919
-name: wrk_presync2
+name: presync2
 operation:
   config:
     groupByAll: false
@@ -159,9 +159,9 @@ operation:
             nodeName: presync1
         join:
           joinCondition: FROM {{ ref('TARGET', 'presync1') }} `presync1`
-        name: wrk_presync2
+        name: presync2
         noLinkRefs: []
-  name: wrk_presync2
+  name: presync2
   overrideSQL: false
   schema: ""
   sqlType: Stage
