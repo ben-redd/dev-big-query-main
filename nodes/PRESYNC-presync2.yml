@@ -10,7 +10,7 @@ operation:
       items:
         - {}
     postSQL: ""
-    preSQL: ""
+    preSQL: "-- testing pre-sql comment"
     selectDistinct: false
     testsEnabled: false
     truncateBefore: true
