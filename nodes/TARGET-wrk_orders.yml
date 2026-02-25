@@ -16,7 +16,7 @@ operation:
     truncateBefore: true
   database: ""
   deployEnabled: true
-  description: ""
+  description: Test Description
   isMultisource: false
   locationName: TARGET
   materializationType: table
@@ -141,7 +141,7 @@ operation:
           stepCounter: 14c41d0f-2a18-40dc-9b3f-90bd397f5811
         config: {}
         dataType: STRING(79)
-        description: Free-text comment about the order.
+        description: Free-text comment about the order. Update
         name: o_comment
         nullable: true
         sourceColumnReferences:

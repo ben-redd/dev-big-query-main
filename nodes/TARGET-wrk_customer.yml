@@ -127,7 +127,7 @@ operation:
           stepCounter: 5457934f-5750-4cd6-b8ca-c186f8502853
         config: {}
         dataType: STRING(117)
-        description: Free-text comment for the customer
+        description: Update
         name: c_comment
         nullable: true
         sourceColumnReferences:
