@@ -32,7 +32,7 @@ operation:
     truncateBefore: false
   database: ""
   deployEnabled: true
-  description: ""
+  description: Test description
   isMultisource: false
   locationName: TARGET
   materializationType: table
@@ -157,7 +157,7 @@ operation:
           stepCounter: ec870bfb-e573-4e20-8aa4-ee79238bb56f
         config: {}
         dataType: STRING(23)
-        description: Free-text comment or description providing additional context about the part.
+        description: Free-text comment or description providing additional context about the part. Update
         name: p_comment
         nullable: true
         sourceColumnReferences:
