@@ -1,0 +1,135 @@
+fileVersion: 1
+id: 8cb0e64b-6ab0-46fa-b4e3-43543ed85824
+name: supplier
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ad784980-de4c-4130-80b7-847aea97eac0
+          stepCounter: 8cb0e64b-6ab0-46fa-b4e3-43543ed85824
+        config: {}
+        dataType: BIGNUMERIC
+        defaultValue: ""
+        description: Unique identifier for the supplier. Primary key of the table.
+        name: s_suppkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d48efbd2-99e6-47c3-8219-3c75ad5a885e
+          stepCounter: 8cb0e64b-6ab0-46fa-b4e3-43543ed85824
+        config: {}
+        dataType: STRING(25)
+        defaultValue: ""
+        description: Name of the supplier.
+        name: s_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a9964f95-1c4c-4da9-8bed-57e2783674f6
+          stepCounter: 8cb0e64b-6ab0-46fa-b4e3-43543ed85824
+        config: {}
+        dataType: STRING(40)
+        defaultValue: ""
+        description: Street address of the supplier.
+        name: s_address
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 660afac1-d188-45f6-8068-6868d4b1708c
+          stepCounter: 8cb0e64b-6ab0-46fa-b4e3-43543ed85824
+        config: {}
+        dataType: BIGNUMERIC
+        defaultValue: ""
+        description: Foreign key referencing the supplier’s nation (nation.n_nationkey).
+        name: s_nationkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3c428bdd-2c23-4cd6-9c5a-6db160991c19
+          stepCounter: 8cb0e64b-6ab0-46fa-b4e3-43543ed85824
+        config: {}
+        dataType: STRING(15)
+        defaultValue: ""
+        description: Supplier’s phone number.
+        name: s_phone
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e4ee25c9-b1f1-476d-bb8d-61dcd260bc91
+          stepCounter: 8cb0e64b-6ab0-46fa-b4e3-43543ed85824
+        config: {}
+        dataType: FLOAT64
+        defaultValue: ""
+        description: Account balance representing outstanding credits or debits.
+        name: s_acctbal
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4c40a87c-dc30-4f0b-9f97-ed0d8a12a507
+          stepCounter: 8cb0e64b-6ab0-46fa-b4e3-43543ed85824
+        config: {}
+        dataType: STRING(101)
+        defaultValue: ""
+        description: Free-text comment describing the supplier.
+        name: s_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: supplier
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
