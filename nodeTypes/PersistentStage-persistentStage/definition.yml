@@ -104,6 +104,7 @@ metadata:
     - displayName: '{{NODE_NAME}}_key'
       transform: ''
       dataType: STRING
+      defaultValue: GENERATE_UUID()
       placement: beginning
       attributeName: isSurrogateKey
 
