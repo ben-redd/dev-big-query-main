@@ -1,0 +1,116 @@
+fileVersion: 1
+id: ee213df6-c2f5-4d34-92ba-78fcea8e4f39
+name: adv_wrk_nation
+operation:
+  config:
+    clusterKeyConfig:
+      items:
+        - {}
+    clusterKeyToggle: false
+    defRndMode: ""
+    exprnType: DAYS FROM NOW
+    groupByAll: false
+    insertStrategy: UNION ALL
+    partByColumn: ""
+    partByIngnTimeExpression: ""
+    partByIntSqlExpression: ""
+    partByTimeSqlExpression: ""
+    partExpireDays: ""
+    partitionBy: Ingestion Time
+    partitionByToggle: false
+    partitionFilterToggle: false
+    postSQL: ""
+    preSQL: ""
+    primaryKeyConfig:
+      items:
+        - {}
+    primaryToggle: false
+    selectDistinct: false
+    tabExpirationToggle: false
+    tabExprnExpression: ""
+    testsEnabled: false
+    truncateBefore: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ee941f48-0d9e-4af9-b82d-8ed78827552d
+          stepCounter: ee213df6-c2f5-4d34-92ba-78fcea8e4f39
+        config: {}
+        dataType: BIGNUMERIC
+        description: Unique identifier for the nation record.
+        name: n_nationkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 281d23b9-5395-4b06-abd4-ada0c16d5a38
+                stepCounter: d52fa4e8-5795-48fb-a84a-7f89c3df05aa
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 49d7e326-259f-4692-9e28-49edc6b8e92d
+          stepCounter: ee213df6-c2f5-4d34-92ba-78fcea8e4f39
+        config: {}
+        dataType: STRING(25)
+        description: Name of the nation.
+        name: n_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4e22d3ba-98cb-4f02-b671-6af3717876a9
+                stepCounter: d52fa4e8-5795-48fb-a84a-7f89c3df05aa
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6308bfef-b484-439e-a7c7-22f84ed58200
+          stepCounter: ee213df6-c2f5-4d34-92ba-78fcea8e4f39
+        config: {}
+        dataType: BIGNUMERIC
+        description: Foreign key linking to the region table (region.r_regionkey).
+        name: n_regionkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8f8ec145-5128-4a12-a48a-b3ca205eb62b
+                stepCounter: d52fa4e8-5795-48fb-a84a-7f89c3df05aa
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b53952d5-a267-424e-9b2f-d65c33f7582b
+          stepCounter: ee213df6-c2f5-4d34-92ba-78fcea8e4f39
+        config: {}
+        dataType: STRING(152)
+        description: Optional free-text comment describing the nation.
+        name: n_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a03de3f1-02e4-48eb-9c63-cc62a702b4b6
+                stepCounter: d52fa4e8-5795-48fb-a84a-7f89c3df05aa
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          nation: d52fa4e8-5795-48fb-a84a-7f89c3df05aa
+        dependencies:
+          - locationName: SRC
+            nodeName: nation
+        join:
+          joinCondition: FROM {{ ref('SRC', 'nation') }} `nation`
+        name: adv_wrk_nation
+        noLinkRefs: []
+  name: adv_wrk_nation
+  overrideSQL: false
+  schema: ""
+  sqlType: 2d91ac59-0cd7-4d32-b0a9-9716c49ebfd5
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,150 @@
+fileVersion: 1
+id: a55cac94-4a5b-400a-94ce-0f97ea7d66eb
+name: adv_ffct_nation
+operation:
+  config:
+    clusterKeyConfig:
+      items:
+        - {}
+    clusterKeyToggle: false
+    defRndMode: ""
+    exprnType: DAYS FROM NOW
+    groupByAll: false
+    insertStrategy: UNION ALL
+    partByColumn: ""
+    partByIngnTimeExpression: ""
+    partByIntSqlExpression: ""
+    partByTimeSqlExpression: ""
+    partExpireDays: ""
+    partitionBy: Ingestion Time
+    partitionByToggle: false
+    partitionFilterToggle: false
+    postSQL: ""
+    preSQL: ""
+    primaryKeyConfig:
+      items:
+        - {}
+    primaryToggle: false
+    selectDistinct: false
+    tabExpirationToggle: false
+    tabExprnExpression: ""
+    testsEnabled: false
+    truncateBefore: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 10cc3317-b836-462b-8e6e-12814b14e800
+          stepCounter: a55cac94-4a5b-400a-94ce-0f97ea7d66eb
+        config: {}
+        dataType: BIGNUMERIC
+        description: Unique identifier for the nation record.
+        name: n_nationkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 281d23b9-5395-4b06-abd4-ada0c16d5a38
+                stepCounter: d52fa4e8-5795-48fb-a84a-7f89c3df05aa
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 651fd959-3412-4c93-a922-205ebe7bc146
+          stepCounter: a55cac94-4a5b-400a-94ce-0f97ea7d66eb
+        config: {}
+        dataType: STRING(25)
+        description: Name of the nation.
+        name: n_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4e22d3ba-98cb-4f02-b671-6af3717876a9
+                stepCounter: d52fa4e8-5795-48fb-a84a-7f89c3df05aa
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0e437ed1-e1d0-4daa-80ca-12b2987343d5
+          stepCounter: a55cac94-4a5b-400a-94ce-0f97ea7d66eb
+        config: {}
+        dataType: BIGNUMERIC
+        description: Foreign key linking to the region table (region.r_regionkey).
+        name: n_regionkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8f8ec145-5128-4a12-a48a-b3ca205eb62b
+                stepCounter: d52fa4e8-5795-48fb-a84a-7f89c3df05aa
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c3d987ac-c9d2-4052-b169-3472f19970ee
+          stepCounter: a55cac94-4a5b-400a-94ce-0f97ea7d66eb
+        config: {}
+        dataType: STRING(152)
+        description: Optional free-text comment describing the nation.
+        name: n_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a03de3f1-02e4-48eb-9c63-cc62a702b4b6
+                stepCounter: d52fa4e8-5795-48fb-a84a-7f89c3df05aa
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 041d1790-c55e-4847-8bb2-8deb2ef057b1
+          stepCounter: a55cac94-4a5b-400a-94ce-0f97ea7d66eb
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: system_create_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8264ddc8-6449-46a7-a1ca-4d0f460a0bd5
+          stepCounter: a55cac94-4a5b-400a-94ce-0f97ea7d66eb
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: system_update_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          nation: d52fa4e8-5795-48fb-a84a-7f89c3df05aa
+        dependencies:
+          - locationName: SRC
+            nodeName: nation
+        join:
+          joinCondition: FROM {{ ref('SRC', 'nation') }} `nation`
+        name: adv_ffct_nation
+        noLinkRefs: []
+  name: adv_ffct_nation
+  overrideSQL: false
+  schema: ""
+  sqlType: 5faa9e3b-020b-4993-83c8-f9b20c50cc76
+  type: sql
+  version: 1
+type: Node
