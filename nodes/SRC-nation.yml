@@ -1,0 +1,84 @@
+fileVersion: 1
+id: 5f36623e-098e-4d1e-b777-2224775ca0bb
+name: nation
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2e44dd86-efe1-46e7-ac44-16d513e1cb21
+          stepCounter: 5f36623e-098e-4d1e-b777-2224775ca0bb
+        config: {}
+        dataType: BIGNUMERIC
+        defaultValue: ""
+        description: Unique identifier for the nation record.
+        name: n_nationkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2b051c24-ba82-4f92-ac9d-28ada0e9f39c
+          stepCounter: 5f36623e-098e-4d1e-b777-2224775ca0bb
+        config: {}
+        dataType: STRING(25)
+        defaultValue: ""
+        description: Name of the nation.
+        name: n_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0ffc2423-85d9-4fee-9716-5e3aeaa5a164
+          stepCounter: 5f36623e-098e-4d1e-b777-2224775ca0bb
+        config: {}
+        dataType: BIGNUMERIC
+        defaultValue: ""
+        description: Foreign key linking to the region table (region.r_regionkey).
+        name: n_regionkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ce0e77d2-974c-4264-a3af-606cec7cd304
+          stepCounter: 5f36623e-098e-4d1e-b777-2224775ca0bb
+        config: {}
+        dataType: STRING(152)
+        defaultValue: ""
+        description: Optional free-text comment describing the nation.
+        name: n_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: nation
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,101 @@
+fileVersion: 1
+id: d3732609-6fca-4334-a393-6e7362090211
+name: partsupp
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a6f1fb04-5189-4f9f-85b8-50a299599bc9
+          stepCounter: d3732609-6fca-4334-a393-6e7362090211
+        config: {}
+        dataType: BIGNUMERIC
+        defaultValue: ""
+        description: Foreign key identifying the part supplied (part.p_partkey).
+        name: ps_partkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5554195d-e326-49fd-8315-7e68f4dd9daf
+          stepCounter: d3732609-6fca-4334-a393-6e7362090211
+        config: {}
+        dataType: BIGNUMERIC
+        defaultValue: ""
+        description: Foreign key identifying the supplier (supplier.s_suppkey).
+        name: ps_suppkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d93c0647-6bdf-4b26-9dc2-81bfbd931429
+          stepCounter: d3732609-6fca-4334-a393-6e7362090211
+        config: {}
+        dataType: BIGNUMERIC
+        defaultValue: ""
+        description: Quantity of the part available from this supplier.
+        name: ps_availqty
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cd4ca5d5-8b82-4da7-9b7a-7729e4331f3a
+          stepCounter: d3732609-6fca-4334-a393-6e7362090211
+        config: {}
+        dataType: FLOAT64
+        defaultValue: ""
+        description: Supplier’s cost to provide one unit of the part.
+        name: ps_supplycost
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 22a19813-cf66-4868-a160-78529ffab647
+          stepCounter: d3732609-6fca-4334-a393-6e7362090211
+        config: {}
+        dataType: STRING(199)
+        defaultValue: ""
+        description: Free-text comment about the part–supplier relationship.
+        name: ps_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: partsupp
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

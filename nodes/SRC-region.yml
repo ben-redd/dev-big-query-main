@@ -1,0 +1,67 @@
+fileVersion: 1
+id: 2a599481-d2e5-464b-a4b1-5bffbf63c19e
+name: region
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ca5ea6d0-3e8d-4311-a2aa-92afd2f0c431
+          stepCounter: 2a599481-d2e5-464b-a4b1-5bffbf63c19e
+        config: {}
+        dataType: BIGNUMERIC
+        defaultValue: ""
+        description: Unique identifier for the region. Primary key of the table.
+        name: r_regionkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f64e32be-af81-4cd8-a9d7-eb297e3da60a
+          stepCounter: 2a599481-d2e5-464b-a4b1-5bffbf63c19e
+        config: {}
+        dataType: STRING(25)
+        defaultValue: ""
+        description: Name of the region.
+        name: r_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2127c85-1266-40c1-9f2f-7aec7c478ebb
+          stepCounter: 2a599481-d2e5-464b-a4b1-5bffbf63c19e
+        config: {}
+        dataType: STRING(152)
+        defaultValue: ""
+        description: Free-text comment describing the region.
+        name: r_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: region
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
