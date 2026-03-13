@@ -1,0 +1,142 @@
+fileVersion: 1
+id: 7cae5e2b-75c7-4803-8bd7-8b1beb9e5db7
+name: wrk_supplier
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 88678586-3090-4a51-99b6-ca8ddd31335b
+          stepCounter: 7cae5e2b-75c7-4803-8bd7-8b1beb9e5db7
+        config: {}
+        dataType: BIGNUMERIC
+        description: Unique identifier for the supplier. Primary key of the table.
+        name: s_suppkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6093a504-9f5f-4108-a1a2-658805e60a26
+                stepCounter: bcb8ea3d-407b-47d1-b5ec-c637a57f8749
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 39470706-7dcc-4aab-8d81-777dde38dc44
+          stepCounter: 7cae5e2b-75c7-4803-8bd7-8b1beb9e5db7
+        config: {}
+        dataType: STRING(25)
+        description: Name of the supplier.
+        name: s_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 05d440b2-e627-49cc-957e-1808147cf14a
+                stepCounter: bcb8ea3d-407b-47d1-b5ec-c637a57f8749
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 034b5b7d-79c7-4bb1-b16b-4899bc57422b
+          stepCounter: 7cae5e2b-75c7-4803-8bd7-8b1beb9e5db7
+        config: {}
+        dataType: STRING(40)
+        description: Street address of the supplier.
+        name: s_address
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ff688b35-8aaf-4247-81b0-6fd017d6341d
+                stepCounter: bcb8ea3d-407b-47d1-b5ec-c637a57f8749
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a339e2cb-3d26-4b26-b1d4-557ba548daa6
+          stepCounter: 7cae5e2b-75c7-4803-8bd7-8b1beb9e5db7
+        config: {}
+        dataType: BIGNUMERIC
+        description: Foreign key referencing the supplier’s nation (nation.n_nationkey).
+        name: s_nationkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 98a8c94f-45e0-4f48-a484-8ec081073e70
+                stepCounter: bcb8ea3d-407b-47d1-b5ec-c637a57f8749
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 397584bb-a084-4b26-a2aa-f70480af5c94
+          stepCounter: 7cae5e2b-75c7-4803-8bd7-8b1beb9e5db7
+        config: {}
+        dataType: STRING(15)
+        description: Supplier’s phone number.
+        name: s_phone
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4d230113-020e-4bd8-8439-4f0e9d473a9b
+                stepCounter: bcb8ea3d-407b-47d1-b5ec-c637a57f8749
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: aa3cd211-7629-42f6-8e68-387c802bccc9
+          stepCounter: 7cae5e2b-75c7-4803-8bd7-8b1beb9e5db7
+        config: {}
+        dataType: FLOAT64
+        description: Account balance representing outstanding credits or debits.
+        name: s_acctbal
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4f1a5ad1-ca21-4e41-bd86-6082ab477d94
+                stepCounter: bcb8ea3d-407b-47d1-b5ec-c637a57f8749
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd1f4b54-306c-4b15-94e5-98b069978f38
+          stepCounter: 7cae5e2b-75c7-4803-8bd7-8b1beb9e5db7
+        config: {}
+        dataType: STRING(101)
+        description: Free-text comment describing the supplier.
+        name: s_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6503ec51-bb74-47c9-8b22-85cb68dbbe39
+                stepCounter: bcb8ea3d-407b-47d1-b5ec-c637a57f8749
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          supplier: bcb8ea3d-407b-47d1-b5ec-c637a57f8749
+        dependencies:
+          - locationName: SRC
+            nodeName: supplier
+        join:
+          joinCondition: FROM {{ ref('SRC', 'supplier') }} `supplier`
+        name: wrk_supplier
+        noLinkRefs: []
+  name: wrk_supplier
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

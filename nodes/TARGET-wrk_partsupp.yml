@@ -1,0 +1,114 @@
+fileVersion: 1
+id: 63686cef-966d-41fb-9a1e-84d03d2a6db3
+name: wrk_partsupp
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6e9df963-e031-4840-a275-18ee2fb665c7
+          stepCounter: 63686cef-966d-41fb-9a1e-84d03d2a6db3
+        config: {}
+        dataType: BIGNUMERIC
+        description: Foreign key identifying the part supplied (part.p_partkey).
+        name: ps_partkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a6f1fb04-5189-4f9f-85b8-50a299599bc9
+                stepCounter: d3732609-6fca-4334-a393-6e7362090211
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ca39e10d-fa96-4583-8bdb-4368dc7872c6
+          stepCounter: 63686cef-966d-41fb-9a1e-84d03d2a6db3
+        config: {}
+        dataType: BIGNUMERIC
+        description: Foreign key identifying the supplier (supplier.s_suppkey).
+        name: ps_suppkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5554195d-e326-49fd-8315-7e68f4dd9daf
+                stepCounter: d3732609-6fca-4334-a393-6e7362090211
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 295ec1b1-a30f-4631-99d6-6c5ca7702c3b
+          stepCounter: 63686cef-966d-41fb-9a1e-84d03d2a6db3
+        config: {}
+        dataType: BIGNUMERIC
+        description: Quantity of the part available from this supplier.
+        name: ps_availqty
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d93c0647-6bdf-4b26-9dc2-81bfbd931429
+                stepCounter: d3732609-6fca-4334-a393-6e7362090211
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5fb121ed-17a1-4ded-b2d7-1d97e11bbcff
+          stepCounter: 63686cef-966d-41fb-9a1e-84d03d2a6db3
+        config: {}
+        dataType: FLOAT64
+        description: Supplier’s cost to provide one unit of the part.
+        name: ps_supplycost
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cd4ca5d5-8b82-4da7-9b7a-7729e4331f3a
+                stepCounter: d3732609-6fca-4334-a393-6e7362090211
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 41aa80ba-ed6d-4a9d-b1f7-edb42eb9875a
+          stepCounter: 63686cef-966d-41fb-9a1e-84d03d2a6db3
+        config: {}
+        dataType: STRING(199)
+        description: Free-text comment about the part–supplier relationship.
+        name: ps_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 22a19813-cf66-4868-a160-78529ffab647
+                stepCounter: d3732609-6fca-4334-a393-6e7362090211
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          partsupp: d3732609-6fca-4334-a393-6e7362090211
+        dependencies:
+          - locationName: SRC
+            nodeName: partsupp
+        join:
+          joinCondition: FROM {{ ref('SRC', 'partsupp') }} `partsupp`
+        name: wrk_partsupp
+        noLinkRefs: []
+  name: wrk_partsupp
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

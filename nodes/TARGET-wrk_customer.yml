@@ -1,0 +1,156 @@
+fileVersion: 1
+id: b1a662c0-c28b-4885-b027-fa0460c6f863
+name: wrk_customer
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Contains master data for all customers in the TPC-H dataset, including identifying information, address details, nation reference, contact information, account balance, market segment classification, and a free-form comment field. Serves as the primary dimension table for customer-related analyses and joins to the NATION and ORDERS tables.
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c423b216-e5ac-4b89-b8b4-eabc7a8b7ceb
+          stepCounter: b1a662c0-c28b-4885-b027-fa0460c6f863
+        config: {}
+        dataType: BIGNUMERIC
+        description: "Primary key: unique customer identifier"
+        name: c_custkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5c537cbd-af49-4f55-b34f-d78776c6967d
+                stepCounter: cc8759de-2412-4d05-a304-61a9945cc8a8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b9e167b4-ee2a-45d3-93fc-9f587c99a41a
+          stepCounter: b1a662c0-c28b-4885-b027-fa0460c6f863
+        config: {}
+        dataType: STRING(25)
+        description: Customer name
+        name: c_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4ec569d0-4d94-4b0d-91e5-91819cf5b93d
+                stepCounter: cc8759de-2412-4d05-a304-61a9945cc8a8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8723892f-8887-4095-88ef-520b63ee8476
+          stepCounter: b1a662c0-c28b-4885-b027-fa0460c6f863
+        config: {}
+        dataType: STRING(40)
+        description: Customer street address
+        name: c_address
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dfff423a-7477-484a-b274-e81c62473f91
+                stepCounter: cc8759de-2412-4d05-a304-61a9945cc8a8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2540bec9-6f56-4105-bf64-f36b07142d40
+          stepCounter: b1a662c0-c28b-4885-b027-fa0460c6f863
+        config: {}
+        dataType: BIGNUMERIC
+        description: Foreign key to nation.n_nationkey
+        name: c_nationkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d38b2d76-2ace-4e35-9b15-c4c3f19938a4
+                stepCounter: cc8759de-2412-4d05-a304-61a9945cc8a8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0285f340-cafe-4313-9085-c40c7e011a7e
+          stepCounter: b1a662c0-c28b-4885-b027-fa0460c6f863
+        config: {}
+        dataType: STRING(15)
+        description: Customer phone number
+        name: c_phone
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ce739139-f52d-4d99-b9f9-b1b31fe391bc
+                stepCounter: cc8759de-2412-4d05-a304-61a9945cc8a8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 49327b36-f31d-4b0e-b4ac-ef19acba2a4a
+          stepCounter: b1a662c0-c28b-4885-b027-fa0460c6f863
+        config: {}
+        dataType: FLOAT64
+        description: Customer account balance
+        name: c_acctbal
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3cc1a5dd-dd4d-4c33-aeb2-a02ed8734662
+                stepCounter: cc8759de-2412-4d05-a304-61a9945cc8a8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f190242-707c-4526-9271-d13ec0b265c3
+          stepCounter: b1a662c0-c28b-4885-b027-fa0460c6f863
+        config: {}
+        dataType: STRING(10)
+        description: Market segment for the customer
+        name: c_mktsegment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4b253582-469d-4a5b-968b-76daac23beaa
+                stepCounter: cc8759de-2412-4d05-a304-61a9945cc8a8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2228677-9e75-4170-b0ed-b9e358538546
+          stepCounter: b1a662c0-c28b-4885-b027-fa0460c6f863
+        config: {}
+        dataType: STRING(117)
+        description: Free-text comment for the customer
+        name: c_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 347246a3-1b5c-4f42-919c-1b171a7253b0
+                stepCounter: cc8759de-2412-4d05-a304-61a9945cc8a8
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          customer: cc8759de-2412-4d05-a304-61a9945cc8a8
+        dependencies:
+          - locationName: SRC
+            nodeName: customer
+        join:
+          joinCondition: FROM {{ ref('SRC', 'customer') }} `customer`
+        name: wrk_customer
+        noLinkRefs: []
+  name: wrk_customer
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
