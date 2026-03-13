@@ -1,0 +1,170 @@
+fileVersion: 1
+id: 2bda6172-f0c3-4409-85af-36796a5837eb
+name: wrk_orders1
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: PRESYNC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 615cd18a-ae84-4f2d-bb89-cb841756bc1e
+          stepCounter: 2bda6172-f0c3-4409-85af-36796a5837eb
+        config: {}
+        dataType: BIGNUMERIC
+        description: Unique identifier for the order. Primary key of the table.
+        name: o_orderkey
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ff2c835d-6946-4c71-b922-2f8082e3474f
+                stepCounter: 9075c192-456d-413f-92de-e2d056af94b8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f327456-9769-43cc-9647-dc18238df9ab
+          stepCounter: 2bda6172-f0c3-4409-85af-36796a5837eb
+        config: {}
+        dataType: BIGNUMERIC
+        description: Foreign key identifying the customer who placed the order (customer.c_custkey).
+        name: o_custkey
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fb2657c9-303a-417d-a6cb-4580a6defc47
+                stepCounter: 9075c192-456d-413f-92de-e2d056af94b8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f4136f47-3881-4d3f-98ff-c3920148424a
+          stepCounter: 2bda6172-f0c3-4409-85af-36796a5837eb
+        config: {}
+        dataType: STRING(1)
+        description: Order status code (e.g., ‘O’ = Open, ‘F’ = Filled, ‘P’ = Pending).
+        name: o_orderstatus
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 204b8146-5798-4bde-9f6f-a276f56a1cc3
+                stepCounter: 9075c192-456d-413f-92de-e2d056af94b8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 42968261-56a6-4902-aee2-9409cea94376
+          stepCounter: 2bda6172-f0c3-4409-85af-36796a5837eb
+        config: {}
+        dataType: FLOAT64
+        description: Total monetary value of the order.
+        name: o_totalprice
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f7205fdc-8da9-4236-a232-db0065a88966
+                stepCounter: 9075c192-456d-413f-92de-e2d056af94b8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e90def04-1073-4def-8b9a-27fae87abb6b
+          stepCounter: 2bda6172-f0c3-4409-85af-36796a5837eb
+        config: {}
+        dataType: DATE
+        description: Date when the order was placed.
+        name: o_orderdate
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b3bd74f3-6dd7-467f-8043-1ff4fd96c904
+                stepCounter: 9075c192-456d-413f-92de-e2d056af94b8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e5d05198-87ba-4d28-bb43-f0ea098d665c
+          stepCounter: 2bda6172-f0c3-4409-85af-36796a5837eb
+        config: {}
+        dataType: STRING(15)
+        description: Priority code assigned to the order (e.g., 1-URGENT).
+        name: o_orderpriority
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: adf3ca83-e121-4ade-ba6c-ba90d712cc23
+                stepCounter: 9075c192-456d-413f-92de-e2d056af94b8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 63e63ce4-5c74-4c6c-94d1-4e566ee2d304
+          stepCounter: 2bda6172-f0c3-4409-85af-36796a5837eb
+        config: {}
+        dataType: STRING(15)
+        description: Identifier of the clerk responsible for the order.
+        name: o_clerk
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 01d263de-e5a2-4b7d-8425-e8beb9997912
+                stepCounter: 9075c192-456d-413f-92de-e2d056af94b8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e8661954-512b-4f9e-9f8f-a6190c0c4f07
+          stepCounter: 2bda6172-f0c3-4409-85af-36796a5837eb
+        config: {}
+        dataType: BIGNUMERIC
+        description: Priority value influencing shipping order.
+        name: o_shippriority
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 680d38c6-4d24-4bff-a75f-5847b9e758fe
+                stepCounter: 9075c192-456d-413f-92de-e2d056af94b8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f3aa7d9e-27ef-4c1c-bece-4ed748583536
+          stepCounter: 2bda6172-f0c3-4409-85af-36796a5837eb
+        config: {}
+        dataType: STRING(79)
+        description: Free-text comment about the order.
+        name: o_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 96872042-67d2-4d0d-928a-08c608e50bdb
+                stepCounter: 9075c192-456d-413f-92de-e2d056af94b8
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          orders: 9075c192-456d-413f-92de-e2d056af94b8
+        dependencies:
+          - locationName: SRC
+            nodeName: orders
+        join:
+          joinCondition: FROM {{ ref('SRC', 'orders') }} `orders`
+        name: wrk_orders1
+        noLinkRefs: []
+  name: wrk_orders1
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
