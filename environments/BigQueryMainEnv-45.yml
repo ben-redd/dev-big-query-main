@@ -1,11 +1,11 @@
 fileVersion: 1
-id: "197"
+id: "45"
 mappingDefinitions:
   SRC:
-    database: bigquery-public-data
-    schema: austin_crime
+    database: cls-dev-bigquery-sample-data
+    schema: tpch
   TARGET:
     database: coalesce-a6346
-    schema: ben_dev_main
+    schema: ben_dev_qa_env
 name: BigQuery Main Env
 type: Environment
