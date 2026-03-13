@@ -1,7 +1,6 @@
 defaultStorageMapping: TARGET
 fileVersion: 1
 locations:
-  - BLANK
   - PRESYNC
   - SRC
   - TARGET
