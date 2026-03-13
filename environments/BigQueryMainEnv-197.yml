@@ -1,6 +1,9 @@
 fileVersion: 1
 id: "197"
 mappingDefinitions:
+  BLANK:
+    database: ""
+    schema: ""
   PRESYNC:
     database: coalesce-a6346
     schema: ben_dev_main
