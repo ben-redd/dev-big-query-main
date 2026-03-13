@@ -1,6 +1,9 @@
 fileVersion: 1
 id: "45"
 mappingDefinitions:
+  PRESYNC:
+    database: coalesce-a6346
+    schema: ben_dev_qa_env
   SRC:
     database: cls-dev-bigquery-sample-data
     schema: tpch
