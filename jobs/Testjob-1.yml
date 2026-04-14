@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "1"
+includeSelector: "{ subgraph: \"bigquery-subgraph-test\" }"
+name: Test job
+type: Job

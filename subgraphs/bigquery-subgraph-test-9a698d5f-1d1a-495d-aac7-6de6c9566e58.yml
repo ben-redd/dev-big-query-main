@@ -1,0 +1,10 @@
+fileVersion: 1
+id: 9a698d5f-1d1a-495d-aac7-6de6c9566e58
+name: bigquery-subgraph-test
+steps:
+  - a55cac94-4a5b-400a-94ce-0f97ea7d66eb
+  - d52fa4e8-5795-48fb-a84a-7f89c3df05aa
+  - ed1867fc-8ddb-4c6e-b4d2-fe2a280a671d
+  - ee213df6-c2f5-4d34-92ba-78fcea8e4f39
+  - fd8d5ebf-08fd-46d9-9405-50bd7a04ceda
+type: Subgraph
