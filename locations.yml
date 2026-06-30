@@ -4,3 +4,4 @@ locations:
   - PRESYNC
   - SRC
   - TARGET
+  - WS_ONLY_SCHEMA

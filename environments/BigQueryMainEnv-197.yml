@@ -10,5 +10,8 @@ mappingDefinitions:
   TARGET:
     database: coalesce-a6346
     schema: ben_dev_main
+  WS_ONLY_SCHEMA:
+    database: coalesce-a6346
+    schema: ben_dev_qa_ws
 name: BigQuery Main Env
 type: Environment
