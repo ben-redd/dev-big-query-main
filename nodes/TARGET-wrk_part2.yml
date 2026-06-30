@@ -1,0 +1,170 @@
+fileVersion: 1
+id: 87e00594-fc77-4900-a974-aa3515c5b4c7
+name: wrk_part2
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 48d04b7b-83c6-4e04-982c-4ded1a1ef340
+          stepCounter: 87e00594-fc77-4900-a974-aa3515c5b4c7
+        config: {}
+        dataType: BIGNUMERIC
+        description: Unique identifier for the part. Primary key of the table.
+        name: p_partkey
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 011cb78a-e2fb-4596-b29b-6eecb877ed53
+                stepCounter: d9b6de1f-2f59-4c93-bf99-08eb3a591a9c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d453bb21-5ede-4edf-a555-ed43f2c9b436
+          stepCounter: 87e00594-fc77-4900-a974-aa3515c5b4c7
+        config: {}
+        dataType: STRING(55)
+        description: Name or descriptive label of the part.
+        name: p_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dc4b2d04-032f-4856-a8c3-08a422ab2d52
+                stepCounter: d9b6de1f-2f59-4c93-bf99-08eb3a591a9c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0c85461a-7c1e-4f7d-8310-f70762b22876
+          stepCounter: 87e00594-fc77-4900-a974-aa3515c5b4c7
+        config: {}
+        dataType: STRING(25)
+        description: Manufacturer name associated with the part.
+        name: p_mfgr
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 768553bd-8391-4c5a-9e9c-f57d69ddbc8f
+                stepCounter: d9b6de1f-2f59-4c93-bf99-08eb3a591a9c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f9fe5c9a-40bd-4726-af44-bb1a612b3dc3
+          stepCounter: 87e00594-fc77-4900-a974-aa3515c5b4c7
+        config: {}
+        dataType: STRING(10)
+        description: Brand designation for the part.
+        name: p_brand
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c27c9d5c-d4c1-4652-9b85-c43655c3561f
+                stepCounter: d9b6de1f-2f59-4c93-bf99-08eb3a591a9c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 83ecdeb0-ea4e-4ee2-8aed-94d02abe33bc
+          stepCounter: 87e00594-fc77-4900-a974-aa3515c5b4c7
+        config: {}
+        dataType: STRING(25)
+        description: Category or type classification of the part.
+        name: p_type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b5932f10-499c-47b0-862d-40aaaf792219
+                stepCounter: d9b6de1f-2f59-4c93-bf99-08eb3a591a9c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 411277b7-1984-427e-911c-80ed2c85d6d0
+          stepCounter: 87e00594-fc77-4900-a974-aa3515c5b4c7
+        config: {}
+        dataType: BIGNUMERIC
+        description: Size specification of the part, expressed as an integer.
+        name: p_size
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c716de28-dafc-44c7-b2ec-95a9d9e48c48
+                stepCounter: d9b6de1f-2f59-4c93-bf99-08eb3a591a9c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 155832a9-c660-44a9-823d-29212de7e90d
+          stepCounter: 87e00594-fc77-4900-a974-aa3515c5b4c7
+        config: {}
+        dataType: STRING(10)
+        description: Packaging or container type for the part (e.g., JUMBO BOX, WRAP PKG).
+        name: p_container
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ff9dc490-40b7-48bd-89a5-9fa408e3fd94
+                stepCounter: d9b6de1f-2f59-4c93-bf99-08eb3a591a9c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5bc9612f-0df7-4312-aac8-7f87b1b472e7
+          stepCounter: 87e00594-fc77-4900-a974-aa3515c5b4c7
+        config: {}
+        dataType: FLOAT64
+        description: Suggested retail price for the part.
+        name: p_retailprice
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f2b1d83f-9ea4-494b-b940-bcb62de94a7e
+                stepCounter: d9b6de1f-2f59-4c93-bf99-08eb3a591a9c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: de66a197-cf83-45ad-b874-be35c994b7a4
+          stepCounter: 87e00594-fc77-4900-a974-aa3515c5b4c7
+        config: {}
+        dataType: STRING(23)
+        description: Free-text comment or description providing additional context about the part.
+        name: p_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ef43ffed-2688-4059-9fd7-43c66df5ea0d
+                stepCounter: d9b6de1f-2f59-4c93-bf99-08eb3a591a9c
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          v_part: d9b6de1f-2f59-4c93-bf99-08eb3a591a9c
+        dependencies:
+          - locationName: TARGET
+            nodeName: v_part
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'v_part') }} `v_part`
+        name: wrk_part2
+        noLinkRefs: []
+  name: wrk_part2
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
