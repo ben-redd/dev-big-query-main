@@ -1,6 +1,6 @@
 fileVersion: 1
 id: 142d2d41-3787-4ee0-bb95-8e50a9227b14
-name: wrk_part
+name: wrk_part_edit
 operation:
   config:
     groupByAll: false
@@ -175,9 +175,9 @@ operation:
             nodeName: part
         join:
           joinCondition: FROM {{ ref('SRC', 'part') }} `part`
-        name: wrk_part
+        name: wrk_part_edit
         noLinkRefs: []
-  name: wrk_part
+  name: wrk_part_edit
   overrideSQL: false
   schema: ""
   sqlType: Stage
