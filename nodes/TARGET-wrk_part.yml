@@ -149,6 +149,22 @@ operation:
               - columnCounter: db54b0a8-39b8-41f3-ab45-95e8b3c0c4c5
                 stepCounter: bf7d5294-3058-4b4a-9fcf-067fca8cd9de
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8652d47d-cb98-480b-bcd4-2910f7aa8173
+          stepCounter: 142d2d41-3787-4ee0-bb95-8e50a9227b14
+        config: {}
+        dataType: STRING(23)
+        defaultValue: ""
+        description: ""
+        name: test_column_w_disabled_description
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: db54b0a8-39b8-41f3-ab45-95e8b3c0c4c5
+                stepCounter: bf7d5294-3058-4b4a-9fcf-067fca8cd9de
+            transform: ""
+        undefined: true
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
