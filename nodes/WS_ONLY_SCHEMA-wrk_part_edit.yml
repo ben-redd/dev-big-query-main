@@ -18,7 +18,7 @@ operation:
   deployEnabled: true
   description: ""
   isMultisource: false
-  locationName: TARGET
+  locationName: WS_ONLY_SCHEMA
   materializationType: table
   metadata:
     appliedNodeTests: []
