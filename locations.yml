@@ -1,6 +1,7 @@
 defaultStorageMapping: TARGET
 fileVersion: 1
 locations:
+  - NEW
   - PRESYNC
   - SRC
   - TARGET
